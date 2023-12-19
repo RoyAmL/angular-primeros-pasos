@@ -1,0 +1,13 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- onDelete -->
+    <dbz-list [characterList]="characters" (onDelete)="onDeleteCharacter($event)"></dbz-list>   <!--Cuando es un evento que debe mandar del padre al hijo se debe usar [], llaves cuadradas son atributos.-->
+  </div>
+
+  <div class="col">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>  <!--Cuando es un evento que se debe emitir al padre se debe usar (), parentesis son eventos.-->
+  </div>
+</div>
